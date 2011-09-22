@@ -1,0 +1,10 @@
+{
+    return "" unless (defined $php{'status'} and $php{'status'} eq 'enabled');
+
+    my @directives = qw(
+        index.htm index.html index.shtml index.cgi
+        index.php index.php3 index.phtml
+       );
+
+    $OUT = "DirectoryIndex @directives\n";
+}

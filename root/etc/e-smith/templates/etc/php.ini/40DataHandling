@@ -1,0 +1,19 @@
+mysql.allow_persistent                 = On
+variables_order                        = "EGPCS"
+register_globals                       = Off
+register_argc_argv                     = On
+post_max_size                          = {
+    my $ms = $php{PostMaxSize} || "20M";
+    $OUT .= "$ms";
+}
+gpc_order                              = "GPC"
+magic_quotes_gpc                       = {
+    my $mq = $php{MagicQuotes} || "Off";
+    $OUT .= "$mq";
+}
+magic_quotes_runtime                   = Off
+magic_quotes_sybase                    = Off
+auto_prepend_file                      =
+auto_append_file                       =
+default_mimetype                       = "text/html"
+

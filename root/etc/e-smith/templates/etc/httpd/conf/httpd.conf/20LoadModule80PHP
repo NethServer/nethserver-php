@@ -1,0 +1,7 @@
+{
+    return "" unless (exists $php{status} and $php{status} eq "enabled");
+
+    return "LoadModule php5_module modules/libphp5.so" if ( -r "/usr/lib/httpd/modules/libphp5.so" ||
+                                                            -r "/usr/lib64/httpd/modules/libphp5.so" );
+    return "LoadModule php4_module modules/libphp4.so";
+}

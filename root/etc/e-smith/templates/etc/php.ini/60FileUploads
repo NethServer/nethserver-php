@@ -1,0 +1,5 @@
+file_uploads                           = On
+upload_max_filesize                    = {
+    my $mf = $php{UploadMaxFilesize} || "10M";
+    $OUT .= "$mf";
+}

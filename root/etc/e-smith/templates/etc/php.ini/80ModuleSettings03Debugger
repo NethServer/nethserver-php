@@ -1,0 +1,5 @@
+[Debugger]
+debugger.host                          = localhost
+debugger.port                          = 7869
+debugger.enabled                       = False
+

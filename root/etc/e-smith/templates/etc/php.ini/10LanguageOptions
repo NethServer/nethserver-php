@@ -1,0 +1,23 @@
+{#;;;;;;;;;;;;;;;;;;
+# Language Options ;
+#;;;;;;;;;;;;;;;;;;;}
+engine                                 = On
+short_open_tag                         = On;
+asp_tags                               = Off
+precision                              = 14
+y2k_compliance                         = Off
+output_buffering                       = Off
+output_handler                         =
+implicit_flush                         = Off
+allow_call_time_pass_reference         = On
+safe_mode                              = Off
+safe_mode_exec_dir                     =
+safe_mode_allowed_env_vars             = PHP_
+safe_mode_protected_env_vars           = LD_LIBRARY_PATH
+disable_functions                      =
+highlight.string                       = #DD0000
+highlight.comment                      = #FF8000
+highlight.keyword                      = #007700
+highlight.bg                           = #FFFFFF
+highlight.default                      = #0000BB
+highlight.html                         = #000000

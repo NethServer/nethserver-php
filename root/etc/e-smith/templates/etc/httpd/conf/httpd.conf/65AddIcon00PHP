@@ -1,0 +1,12 @@
+{
+    return "" unless (exists $php{status} and $php{status} eq "enabled");
+
+    $OUT =<<HERE;
+
+<IfModule mod_php4.c>
+    AddIcon /icons/php4.gif .php3 .php4 .php .phtml
+    AddIcon /icons/phps.gif .phps
+</IfModule>
+
+HERE
+}

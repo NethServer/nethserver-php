@@ -1,0 +1,3 @@
+{
+    return "allow_url_fopen = $php{AllowUrlFopen}\n";
+}

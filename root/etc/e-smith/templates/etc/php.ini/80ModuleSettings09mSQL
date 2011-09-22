@@ -1,0 +1,5 @@
+[mSQL]
+msql.allow_persistent                  = On
+msql.max_persistent                    = -1
+msql.max_links                         = -1
+

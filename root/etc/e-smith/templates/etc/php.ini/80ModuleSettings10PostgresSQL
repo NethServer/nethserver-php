@@ -1,0 +1,5 @@
+[PostgresSQL]
+pgsql.allow_persistent                 = On
+pgsql.max_persistent                   = -1
+pgsql.max_links                        = -1
+
