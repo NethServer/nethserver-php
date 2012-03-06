@@ -3,6 +3,7 @@
 use esmith::Build::CreateLinks  qw(:all);
 
 templates2events("/etc/php.ini", qw(
-	console-save
-	bootstrap-console-save
-    ));
+        console-save
+        bootstrap-console-save
+        nethserver-php-update
+));
