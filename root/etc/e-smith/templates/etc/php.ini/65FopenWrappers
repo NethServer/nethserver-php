@@ -1,3 +1,1 @@
-{
-    return "allow_url_fopen = $php{AllowUrlFopen}\n";
-}
+allow_url_fopen = { $OUT .= $php{AllowUrlFopen} || "Off"; }
