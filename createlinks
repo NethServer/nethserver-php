@@ -1,9 +1,17 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
+#
+# NethServer
+#
+# Copyright (C) 2012 Nethesis srl
+#
+
+use strict;
 use esmith::Build::CreateLinks  qw(:all);
 
-templates2events("/etc/php.ini", qw(
-        console-save
-        bootstrap-console-save
+templates2events('/etc/php.ini', qw(
         nethserver-php-update
+        nethserver-php-save
 ));
+
+
