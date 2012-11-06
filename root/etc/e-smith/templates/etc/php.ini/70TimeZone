@@ -1,2 +1,0 @@
-; refs #497 - `date.timezone` directive must be set in PHP 5.3
-date.timezone = "{ $TimeZone || 'UTC' }"

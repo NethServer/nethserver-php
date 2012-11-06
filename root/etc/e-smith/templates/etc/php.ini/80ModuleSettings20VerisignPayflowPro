@@ -1,5 +1,0 @@
-[Verisign Payflow Pro]
-pfpro.defaulthost                      = "test.signio.com"
-pfpro.defaultport                      = 443
-pfpro.defaulttimeout                   = 30
-

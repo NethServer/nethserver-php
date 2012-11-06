@@ -1,4 +1,0 @@
-[mail function]
-SMTP                                   = localhost
-sendmail_from                          = me@localhost.com
-

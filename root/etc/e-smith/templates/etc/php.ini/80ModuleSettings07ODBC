@@ -1,8 +1,0 @@
-[ODBC]
-odbc.allow_persistent                  = On
-odbc.check_persistent                  = On
-odbc.max_persistent                    = -1
-odbc.max_links                         = -1
-odbc.defaultlrl                        = 4096
-odbc.defaultbinmode                    = 1
-

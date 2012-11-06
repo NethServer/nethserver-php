@@ -1,3 +1,0 @@
-[Syslog]
-define_syslog_variables                = Off
-

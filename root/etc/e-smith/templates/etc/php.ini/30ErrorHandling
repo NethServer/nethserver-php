@@ -1,8 +1,0 @@
-mysql.allow_persistent                 = On
-error_reporting                        = E_ALL & ~E_NOTICE
-display_errors                         = Off
-display_startup_errors                 = Off
-log_errors                             = On
-error_log                              = syslog
-track_errors                           = Off
-warn_plus_overloading                  = Off

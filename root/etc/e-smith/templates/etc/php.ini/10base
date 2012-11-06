@@ -1,0 +1,25 @@
+#
+# 10base
+#
+short_open_tag = { $php{ShortOpenTag} || "0" }
+expose_php = { $php{ExposePhp} || "0" }
+max_execution_time = { $php{MaxExecutionTime} || "30" }
+memory_limit = { $MemoryLimit = $php{MemoryLimit} || "32"; }M
+post_max_size = { $PostMaxSize = $php{PostMaxSize} || "8"; }M
+upload_max_filesize = { $UploadMaxFilesize = $php{UploadMaxFilesize} || "2"; }M {
+
+    # Check memory limits consistency. Must be true the relation
+    # UploadMaxFilesize < PostMaxSize < MemoryLimit
+    # See http://php.net/manual/en/ini.list.php
+
+    if($UploadMaxFilesize >= $PostMaxSize) {
+	warn "php.ini: UploadMaxFilesize must be less than PostMaxSize. See http://php.net/manual/en/ini.list.php\n";
+    }
+
+    if($PostMaxSize >= $MemoryLimit) {
+	warn "php.ini: PostMaxSize must be less than MemoryLimit. See http://php.net/manual/en/ini.list.php\n";
+    }
+
+    ''; 
+}
+date.timezone = "{ $php{DateTimezone} || 'UTC' }"

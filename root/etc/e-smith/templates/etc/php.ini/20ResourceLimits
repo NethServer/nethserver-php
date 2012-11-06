@@ -1,8 +1,0 @@
-max_execution_time                     = {
-    my $et = $php{MaxExecutionTime} || "30";
-    $OUT .= "$et";
-}
-memory_limit                           = {
-    my $ml = $php{MemoryLimit} || "32M";
-    $OUT .= "$ml";
-}

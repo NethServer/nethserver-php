@@ -1,8 +1,0 @@
-[Ingres II]
-ingres.allow_persistent                = On
-ingres.max_persistent                  = -1
-ingres.max_links                       = -1
-ingres.default_database                =
-ingres.default_user                    =
-ingres.default_password                =
-

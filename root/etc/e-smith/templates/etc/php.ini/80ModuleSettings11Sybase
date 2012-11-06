@@ -1,8 +1,0 @@
-[Sybase]
-sybase.allow_persistent                = On
-sybase.max_persistent                  = -1
-sybase.max_links                       = -1
-sybase.min_error_severity              = 10
-sybase.min_message_severity            = 10
-sybase.compatability_mode              = Off
-
