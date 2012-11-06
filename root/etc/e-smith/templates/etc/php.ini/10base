@@ -1,6 +1,6 @@
-#
-# 10base
-#
+;
+; 10base
+;
 short_open_tag = { $php{ShortOpenTag} || "0" }
 expose_php = { $php{ExposePhp} || "0" }
 max_execution_time = { $php{MaxExecutionTime} || "30" }
