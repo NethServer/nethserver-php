@@ -1,0 +1,46 @@
+Summary: NethServer generic PHP configuration
+Name: nethserver-php
+Version: @@VERSION@@
+Release: @@RELEASE@@%{?dist}
+License: GPL
+Source: %{name}-%{version}.tar.gz
+BuildArch: noarch
+URL: http://dev.nethesis.it/projects/%{name}
+
+Requires: nethserver-base
+Requires: php-common
+
+BuildRequires: nethserver-devtools
+
+%description
+Set global php.ini directives from NethServer Configuration database.
+
+%prep
+%setup
+
+%build
+perl createlinks
+
+%install
+rm -rf $RPM_BUILD_ROOT
+(cd root   ; find . -depth -print | cpio -dump $RPM_BUILD_ROOT)
+%{genfilelist} $RPM_BUILD_ROOT \
+    > %{name}-%{version}-%{release}-filelist
+echo "%doc COPYING" >> %{name}-%{version}-%{release}-filelist
+
+%clean 
+rm -rf $RPM_BUILD_ROOT
+
+%files -f %{name}-%{version}-%{release}-filelist
+%defattr(-,root,root)
+
+%post
+source /etc/nethserver/rpm_hook_functions
+event_queue add %{name}-update
+
+
+%changelog
+* Tue Nov  6 2012 Davide Principi <davide.principi@nethesis.it> - 6.133.0
+- branch 6.133
+
+
