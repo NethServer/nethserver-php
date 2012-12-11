@@ -39,8 +39,7 @@ source /etc/nethserver/rpm_hook_functions
 event_queue add %{name}-update
 
 
-%changelog
-* Tue Nov  6 2012 Davide Principi <davide.principi@nethesis.it> - 6.133.0
-- branch 6.133
 
+
+%changelog
 
