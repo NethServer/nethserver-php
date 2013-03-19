@@ -42,4 +42,5 @@ event_queue add %{name}-update
 
 
 %changelog
-
+* Tue Mar 19 2013 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 1.0.0-2.ns6
+- Update spec URL
