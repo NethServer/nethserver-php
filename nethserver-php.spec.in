@@ -35,9 +35,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 
 %post
-source /etc/nethserver/rpm_hook_functions
-event_queue add %{name}-update
-
 
 
 
