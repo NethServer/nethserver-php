@@ -1,7 +1,7 @@
 Summary: NethServer generic PHP configuration
 Name: nethserver-php
 Version: 1.1.1
-Release: 1
+Release: 1%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
 BuildArch: noarch
