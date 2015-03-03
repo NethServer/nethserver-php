@@ -22,16 +22,4 @@ upload_max_filesize = { $UploadMaxFilesize = $php{UploadMaxFilesize} || "2"; }M 
 
     ''; 
 }
-date.timezone = "{
- 
-    #If php DateTimeZone prop is empty, check if system default TimeZone is recognized by php and use it if it is
-
-    if ($php{DateTimezone} ne '') {
-        $OUT = $php{DateTimezone};
-    } elsif (system('/usr/bin/php', '-r',  sprintf('try{new DateTimeZone("%s");}catch(Exception $e){exit (1);}', $TimeZone) )==0) {
-        $OUT = $TimeZone;
-    } else {
-        $OUT = "UTC";
-    }
-}"
-
+date.timezone = "{ $php{DateTimezone} || 'UTC' }"
