@@ -31,4 +31,9 @@ templates2events('/etc/php.ini', qw(
         nethserver-php-save
 ));
 
-
+#
+# update default PHP timezone settings
+#
+event_templates('nethserver-ntp-save', qw(
+       /etc/php.ini
+));
