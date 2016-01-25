@@ -22,14 +22,15 @@ Set global php.ini directives from NethServer Configuration database.
 perl createlinks
 
 %install
-rm -rf $RPM_BUILD_ROOT
-(cd root   ; find . -depth -print | cpio -dump $RPM_BUILD_ROOT)
-%{genfilelist} $RPM_BUILD_ROOT > %{name}-%{version}-%{release}-filelist
+rm -rf %{buildroot}
+(cd root   ; find . -depth -print | cpio -dump %{buildroot})
+%{genfilelist} %{buildroot} > %{name}-%{version}-%{release}-filelist
 
 %files -f %{name}-%{version}-%{release}-filelist
 %defattr(-,root,root)
 %doc COPYING
 %dir %{_nseventsdir}/%{name}-update
+%attr(0644,root,root) %ghost %{_sysconfdir}/php.d/nethserver.ini
 
 %changelog
 * Tue Mar 03 2015 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 1.1.2-1

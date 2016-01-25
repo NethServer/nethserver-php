@@ -1,10 +1,10 @@
 ;
 ; 10base
 ;
-short_open_tag = { $php{ShortOpenTag} || "0" }
-expose_php = { $php{ExposePhp} || "0" }
-max_execution_time = { $php{MaxExecutionTime} || "30" }
-memory_limit = { $MemoryLimit = $php{MemoryLimit} || "32"; }M
+short_open_tag = { $php{ShortOpenTag} || "Off" }
+expose_php = { $php{ExposePhp} || "On" }
+max_execution_time = { $php{MaxExecutionTime} || "0" }
+memory_limit = { $MemoryLimit = $php{MemoryLimit} || "128"; }M
 post_max_size = { $PostMaxSize = $php{PostMaxSize} || "8"; }M
 upload_max_filesize = { $UploadMaxFilesize = $php{UploadMaxFilesize} || "2"; }M {
 

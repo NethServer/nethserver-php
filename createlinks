@@ -23,17 +23,10 @@ use strict;
 use esmith::Build::CreateLinks  qw(:all);
 
 event_actions('nethserver-php-update', qw(
-       	      initialize-default-databases 00
+  initialize-default-databases 00
 ));
 
-templates2events('/etc/php.ini', qw(
-        nethserver-php-update
-        nethserver-php-save
+event_templates('nethserver-php-update', qw(
+  /etc/php.d/nethserver.ini       
 ));
 
-#
-# update default PHP timezone settings
-#
-event_templates('nethserver-ntp-save', qw(
-       /etc/php.ini
-));
