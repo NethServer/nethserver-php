@@ -1,6 +1,6 @@
 Summary: NethServer generic PHP configuration
 Name: nethserver-php
-Version: 1.1.2
+Version: 1.2.0
 Release: 1%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
@@ -33,6 +33,9 @@ rm -rf %{buildroot}
 %attr(0644,root,root) %ghost %{_sysconfdir}/php.d/nethserver.ini
 
 %changelog
+* Thu Jul 07 2016 Stefano Fancello <stefano.fancello@nethesis.it> - 1.2.0-1
+- First NS7 release
+
 * Tue Mar 03 2015 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 1.1.2-1
 - Set PHP default timezone from system timezone - Enhancement #3068 [NethServer]
 - nethserver-devbox replacements - Feature #3009 [NethServer]
