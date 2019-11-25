@@ -22,4 +22,5 @@ upload_max_filesize = { $UploadMaxFilesize = $php{UploadMaxFilesize} || "2"; }M 
 
     ''; 
 }
+max_file_uploads = {$php{'MaxFileUploads'} ||'20';}
 date.timezone = "{ $php{DateTimezone} || 'UTC' }"

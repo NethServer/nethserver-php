@@ -12,5 +12,7 @@ Database example: ::
     PostMaxSize=
     ShortOpenTag=
     UploadMaxFilesize=
+    MaxFileUploads=
 
 MemoryLimit, PostMaxSize, UploadMaxFilesize are expressed in MB units.
+MaxFileUploads is set by default to 20
