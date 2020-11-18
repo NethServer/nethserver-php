@@ -9,6 +9,7 @@ URL: %{url_prefix}/%{name}
 
 Requires: nethserver-base
 Requires: php-common
+Requires: php, php-xml, php-intl
 
 BuildRequires: nethserver-devtools
 
