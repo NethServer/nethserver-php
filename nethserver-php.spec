@@ -1,6 +1,6 @@
 Summary: NethServer generic PHP configuration
 Name: nethserver-php
-Version: 1.2.1
+Version: 1.3.0
 Release: 1%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
@@ -34,6 +34,9 @@ rm -rf %{buildroot}
 %attr(0644,root,root) %ghost %{_sysconfdir}/php.d/nethserver.ini
 
 %changelog
+* Wed Nov 18 2020 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 1.3.0-1
+- New NethServer 7.9.2009 defaults - NethServer/dev#6320
+
 * Wed Dec 11 2019 Stephane de Labrusse <stephdl@de-labrusse.fr> - 1.2.1-1
 - Change PHP-FPM version in Web server app - NethServer/dev#5912
 - Automated RPM builds - NethServer/dev#5393
