@@ -30,3 +30,12 @@ event_templates('nethserver-php-update', qw(
   /etc/php.d/nethserver.ini       
 ));
 
+
+#
+# Reload web servers running mod_php, so they read the new php.ini
+# values. Services not installed or not configured are skipped.
+#
+event_services('nethserver-php-update', qw(
+  httpd reload
+  httpd-admin reload
+));

@@ -24,3 +24,5 @@ upload_max_filesize = { $UploadMaxFilesize = $php{UploadMaxFilesize} || "2"; }M 
 }
 max_file_uploads = {$php{'MaxFileUploads'} ||'20';}
 date.timezone = "{ $php{DateTimezone} || 'UTC' }"
+; Mitigation for CVE-2026-109618 and CVE-2026-109619 - NethServer/dev#8256
+session.upload_progress.enabled = Off
