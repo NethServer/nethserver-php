@@ -1,6 +1,6 @@
 Summary: NethServer generic PHP configuration
 Name: nethserver-php
-Version: 1.3.0
+Version: 1.3.1
 Release: 1%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
@@ -34,6 +34,9 @@ rm -rf %{buildroot}
 %attr(0644,root,root) %ghost %{_sysconfdir}/php.d/nethserver.ini
 
 %changelog
+* Thu Oct 22 2026 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 1.3.1-1
+- PHP critical RCE vulnerabilities (CVE-2026-109618 / CVE-2026-109619) - NethServer/dev#8256
+
 * Wed Nov 18 2020 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 1.3.0-1
 - New NethServer 7.9.2009 defaults - NethServer/dev#6320
 
